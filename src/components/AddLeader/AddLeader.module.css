@@ -1,0 +1,11 @@
+.addLeader {
+  margin-bottom: 1rem;
+}
+
+.addBtn {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  border-color: #B7B7B7
+}

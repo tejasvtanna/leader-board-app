@@ -1,0 +1,27 @@
+.leader {
+  margin: 10px;
+  border: lightgrey solid 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  padding: 0.4rem;
+  border-radius: 5px;
+  background-color: #efefef;
+}
+
+.name {
+  width: 70%;
+  font-weight: bold;
+}
+
+.score {
+  color: #749adc;
+  text-shadow: 1px 1px #749adc;
+  font-weight: bold;
+}
+
+.plusMinus {
+  width: 2rem;
+  border-color: lightgrey;
+}

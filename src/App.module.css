@@ -1,0 +1,11 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.appHeader {
+  text-align: center;
+  font-weight: bold;
+  margin: 1rem;
+  font-size: x-large;
+}
