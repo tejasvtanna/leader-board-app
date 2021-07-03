@@ -7,8 +7,7 @@ interface Props {
 const AddLeader = ({ onAddLeader }: Props) => {
 
   const handleAddLeader = () => {
-    const name = prompt('Enter new leader name')?.trim()
-    if(!name) return
+    const name = prompt('Enter new leader name')?.trim() || ''
     onAddLeader(name)
   }
 

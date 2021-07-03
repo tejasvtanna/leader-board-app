@@ -29,7 +29,7 @@ class LeaderboardService implements ILeaderboardService {
     return this.list
   }
 
-  insert(name: string) {
+  async insert(name: string) {
     leadersRef.push({ id: nanoid(), name, points: 0 })
   }
 
