@@ -1,5 +1,3 @@
-import React from 'react'
-import logo from './logo.svg'
 import LeaderBoard from 'components/LeaderBoard/LeaderBoard'
 import classes from 'App.module.css'
 

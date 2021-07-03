@@ -1,9 +1,22 @@
 import classes from './AddLeader.module.css'
 
-const AddLeader = () => {
+interface Props {
+  onAddLeader: (name: string) => {}
+}
+
+const AddLeader = ({ onAddLeader }: Props) => {
+
+  const handleAddLeader = () => {
+    const name = prompt('Enter new leader name')?.trim()
+    if(!name) return
+    onAddLeader(name)
+  }
+
   return (
     <div className={classes.addLeader}>
-      <button className={classes.addBtn}>Add Leader</button>
+      <button className={classes.addBtn} onClick={handleAddLeader}>
+        Add Leader
+      </button>
     </div>
   )
 }

@@ -1,8 +1,9 @@
 .leaderList {
   display: flex;
   flex-direction: column;
-  border: solid 2px lightgrey;
   width: 30rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  border: solid 2px lightgrey;
+  border-radius: 10px;
 }

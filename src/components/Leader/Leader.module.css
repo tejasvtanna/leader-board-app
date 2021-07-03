@@ -1,5 +1,5 @@
 .leader {
-  margin: 10px;
+  margin: 10px 20px;
   border: lightgrey solid 1px;
   display: flex;
   justify-content: space-between;
@@ -24,4 +24,8 @@
 .plusMinus {
   width: 2rem;
   border-color: lightgrey;
+}
+
+.plusMinus:hover {
+  cursor: pointer;
 }
