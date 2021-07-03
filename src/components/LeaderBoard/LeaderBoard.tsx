@@ -11,7 +11,7 @@ const LeaderBoard = () => {
   // console.log(leaders)
 
   useEffect(() => {
-    getLeaders()
+    leaderboardService.init(getLeaders)
   }, [])
 
   const getLeaders = () => {
