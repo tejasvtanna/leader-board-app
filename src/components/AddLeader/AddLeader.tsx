@@ -5,9 +5,9 @@ interface Props {
 }
 
 const AddLeader = ({ onAddLeader }: Props) => {
-
   const handleAddLeader = () => {
-    const name = prompt('Enter new leader name')?.trim() || ''
+    const name = prompt('Enter new leader name')?.trim()
+    if (name === undefined) return
     onAddLeader(name)
   }
 

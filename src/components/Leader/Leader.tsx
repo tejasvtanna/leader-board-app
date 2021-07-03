@@ -12,11 +12,16 @@ const Leader = ({ leader, onIncrement, onDecrement }: Props) => {
   return (
     <div className={classes.leader}>
       <div className={classes.name}>{leader.name}</div>
-      <div className={classes.score}>{leader.points}</div>
-      <button className={classes.plusMinus} onClick={() => onIncrement(leader.id)}>
+      <div className={classes.score} data-testid="points">
+        {leader.points}
+      </div>
+      <button className={classes.plusMinus} onClick={() => onIncrement(leader.id)} data-testid="btnIncrement">
         +
       </button>
-      <button className={classes.plusMinus} onClick={() => onDecrement(leader.id, leader.points)}>
+      <button
+        className={classes.plusMinus}
+        onClick={() => onDecrement(leader.id, leader.points)}
+        data-testid="btnDecrement">
         -
       </button>
     </div>

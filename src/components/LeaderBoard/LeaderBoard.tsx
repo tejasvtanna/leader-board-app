@@ -21,7 +21,7 @@ const LeaderBoard = () => {
   }
 
   const handleAddLeader = async (name: string) => {
-    if(!name){
+    if (!name) {
       toast.error("Leader name can't be empty")
       return
     }

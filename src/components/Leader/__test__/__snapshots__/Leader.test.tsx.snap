@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Leader snapshot testing 1`] = `
+<div
+  className="leader"
+>
+  <div
+    className="name"
+  >
+    Tejas
+  </div>
+  <div
+    className="score"
+    data-testid="points"
+  >
+    1
+  </div>
+  <button
+    className="plusMinus"
+    data-testid="btnIncrement"
+    onClick={[Function]}
+  >
+    +
+  </button>
+  <button
+    className="plusMinus"
+    data-testid="btnDecrement"
+    onClick={[Function]}
+  >
+    -
+  </button>
+</div>
+`;
