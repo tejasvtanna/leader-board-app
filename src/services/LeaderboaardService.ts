@@ -10,15 +10,16 @@ class LeaderboardService implements ILeaderboardService {
   // getting existing leaders from firebase
   init(callback: any) {
     leadersRef.on('value', (snapshot) => {
-      this.list = []
+      const updatedList = []
       let items = snapshot.val()
       for (let item in items) {
-        this.list.push({
+        updatedList.push({
           id: item,
           name: items[item].name,
           points: items[item].points,
         })
       }
+      this.list = updatedList
 
       callback()
     })
@@ -28,11 +29,11 @@ class LeaderboardService implements ILeaderboardService {
     return this.list
   }
 
-  async insert(name: string) {
+  insert(name: string) {
     leadersRef.push({ id: nanoid(), name, points: 0 })
   }
 
-  async increment(id: string) {
+  increment(id: string) {
     const leader = this.list.find((leader) => leader.id === id)
     if (!leader) return
 
@@ -42,7 +43,7 @@ class LeaderboardService implements ILeaderboardService {
       .then(() => (leader.points += 1))
   }
 
-  async decrement(id: string) {
+  decrement(id: string) {
     const leader = this.list.find((leader) => leader.id === id)
     if (!leader) return
 

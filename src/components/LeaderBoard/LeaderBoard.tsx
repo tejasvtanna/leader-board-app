@@ -11,25 +11,26 @@ const LeaderBoard = () => {
   // console.log(leaders)
 
   useEffect(() => {
-    leaderboardService.init(getLeaders)
+    leaderboardService.init(updateState)
   }, [])
 
-  const getLeaders = () => {
+  const updateState = () => {
     const data = leaderboardService.getList()
     setLeaders([...data])
   }
 
   const handleAddLeader = async (name: string) => {
-    await leaderboardService.insert(name).then(getLeaders)
+    leaderboardService.insert(name)
   }
 
   const handleIncrement = async (id: string) => {
-    await leaderboardService.increment(id).then(getLeaders)
+    leaderboardService.increment(id)
   }
 
   const handleDecrement = async (id: string, points: number) => {
     if (points === 0) return
-    leaderboardService.decrement(id).then(getLeaders)
+
+    leaderboardService.decrement(id)
   }
 
   return (
